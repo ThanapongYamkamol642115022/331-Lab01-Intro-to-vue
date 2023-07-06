@@ -19,8 +19,10 @@ createApp({
       { id: 2, size: "M" },
       { id: 3, size: "L" },
     ]);
+
+    const cart = ref(0)
     return{
-      product , image , link , inStock , inventory , details , variants , sizes
+      product , image , link , inStock , inventory , details , variants , sizes , cart
     }
  }
 
