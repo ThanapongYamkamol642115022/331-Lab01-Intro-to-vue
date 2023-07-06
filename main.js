@@ -23,9 +23,12 @@ createApp({
     function addToCart(){
       cart.value +=1
     }
+    function updateImage(variantImage){
+      image.value = variantImage
+    }
 
     return{
-      product , image , link , inStock , inventory , details , variants , sizes , cart , addToCart
+      product , image , link , inStock , inventory , details , variants , sizes , cart , addToCart , updateImage
     }
  }
 
