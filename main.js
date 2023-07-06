@@ -5,8 +5,9 @@ createApp({
   setup(){
     const product = ref('boots')
     const description = ref('this is a good boots for traveler!')
+    const image = ref('./assets/images/socks_green.jpg')
     return{
-      product , description
+      product , description , image
     }
  }
 
