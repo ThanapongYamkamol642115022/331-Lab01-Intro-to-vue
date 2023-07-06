@@ -12,9 +12,11 @@ createApp({
     const details = ref([
       '50% cotton' , '30% wool' , '20% polyester'
     ])
+    const variants = ref([
+      {id : 2234 , color : 'green'} , {id : 2335 , color: 'blue'}
+    ])
     return{
-      product , description , image , link , inStock , inventory , details
-    }
+      product , description , image , link , inStock , inventory , details , variants
  }
 
 }).mount('#app')
