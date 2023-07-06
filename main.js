@@ -26,9 +26,13 @@ createApp({
     function updateImage(variantImage){
       image.value = variantImage
     }
+    
+    function changeInStock(){
+      inStock.value = !inStock.value;
+    }
 
     return{
-      product , image , link , inStock , inventory , details , variants , sizes , cart , addToCart , updateImage
+      product , image , link , inStock , inventory , details , variants , sizes , cart , addToCart , updateImage , changeInStock
     }
  }
 
