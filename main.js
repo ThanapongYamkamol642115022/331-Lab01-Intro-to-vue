@@ -5,6 +5,7 @@ createApp({
   setup(){
     const product = ref('boots')
     const brand = ref('SE 331')
+    const onSale = ref(false)
     // const description = ref('this is a good boots for traveler!')
     // const image = ref('./assets/images/socks_green.jpg')
     const link = ref("https://www.camt.cmu.ac.th/");
@@ -27,8 +28,19 @@ createApp({
     }
 
     const title = computed(() =>{
-      return brand.value + ' ' + product.value
+      if(!onSale.value){
+        console.log(0);
+
+        return brand.value + ' ' + product.value;
+      }
+      if (onSale.value) {
+        console.log(1);
+        console.log(onSale);
+
+        return brand.value + ' ' + product.value + " is on sale"
+      }
     })
+    
     function updateImage(variantImage){
       image.value = variantImage
     }
@@ -37,7 +49,7 @@ createApp({
       inStock.value = !inStock.value;
     }
 
-    function updateVariant(index){
+    const updateVariant = (index) =>{
       selectVariant.value = index;
     }
 
@@ -62,7 +74,8 @@ createApp({
       addToCart , 
       updateImage , 
       changeInStock ,
-      title
+      title,
+      updateVariant
       // brand
     }
  }
