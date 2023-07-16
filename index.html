@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="product-info">
-            <h1><a :href="link">{{product}}</a> </h1>
+            <h1><a :href="link">{{brand + ' ' + product}}</a> </h1>
             <!-- <p><a :href="link">{{description}}</a></p> -->
             <p v-if=" inStock && inventory > 10">In Stock</p>
             <p v-else-if="inStock && inventory <= 10 && inventory > 0">
